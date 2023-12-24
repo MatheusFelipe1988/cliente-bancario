@@ -20,7 +20,11 @@ public class ClienteService {
         cliente.setSobreNome(clienteDTO.sobreNome());
         cliente.setParticipacao(clienteDTO.participacao());
 
-        if (cliente == null){
+        if (cliente == null
+                || cliente.getNome() == null
+                || cliente.getSobreNome() == null
+                || cliente.getParticipacao() == null){
+
             throw new NullPointerException();
         }
 
@@ -30,7 +34,7 @@ public class ClienteService {
 
         List<Cliente> allClientes = clienteRepository.findAll();
 
-        if(allClientes == null){
+        if(allClientes == null || allClientes.isEmpty()){
             throw new NullPointerException();
         }
         return allClientes;

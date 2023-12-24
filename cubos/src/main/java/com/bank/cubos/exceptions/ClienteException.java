@@ -10,6 +10,6 @@ import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExcep
 public class ClienteException extends ResponseEntityExceptionHandler {
     @ExceptionHandler(NullPointerException.class)
     public ResponseEntity newException(Exception exception){
-        return new ResponseEntity<>("isto é invalido, pois isso é nulo", HttpStatus.BAD_GATEWAY);
+        return new ResponseEntity<>("isto é invalido, pois isso é nulo", HttpStatus.BAD_REQUEST);
     }
 }

@@ -17,4 +17,14 @@ public class Cliente {
     private String nome;
     private String sobreNome;
     private BigDecimal participacao;
+
+    public Cliente(String nome, String sobreNome, BigDecimal participacao) {
+        this.nome = nome;
+        this.sobreNome = sobreNome;
+        this.participacao = participacao;
+    }
+
+    public Cliente() {
+
+    }
 }
